@@ -1,0 +1,1594 @@
+// in-line comment
+/* multiple-line comment */
+
+Data types:
+
+    undefined
+    null
+    boolean
+    string
+    symbol
+    number
+    object
+
+to know we use typeof. Ex: 
+console.log(typeof 14);
+
+declare a variable :
+
+var myVariableName = "Value (here a string)";
+
+myVariableName = 5; // variable redeclared (here with a number)
+
+another way :
+
+let ourName = "FreeCodeCamp"
+const pi = 3.14
+
+/* ---------------------------- */
+
+var a;
+var b = 2; 
+
+console.log(a); // null
+
+a = 7;
+b = a;
+
+console.log(a); // 7
+
+/* ---------------------------- */
+
+var a = 5:
+var b = 10;
+var c = "I'm a";
+
+a = a + 1;
+b = b + 5;
+c = c + " String !";
+
+/* ---------------------------- */
+
+Javascript is CaseSensitive
+
+var HellOWorLD;
+
+helloWORLD = 5; // throw an error because helloWORLD doesn't exist 
+// helloWORLD != HellOWorLD
+
+/* ---------------------------- */
+
+var sum = 10 + 10;
+console.log(sum); // 20
+
+var difference = 45 - 33; 
+console.log(difference); // 12
+
+var product = 8 * 5;
+console.log(product); // 40
+
+var quotient = 66 / 33;
+console.log(quotient); // 2
+
+var modulo = 10 % 2;
+console.log(modulo); // 0
+
+var exponent = 2**2;
+console.log(exponent); // 4
+
+/* ---------------------------- */
+
+Incrementation
+
+var myVar = 87;
+myVar = myVar + 1;
+
+// is equal to :
+
+myVar += 1;
+
+// or 
+
+myVar++; // post-incrementation
+++myVar; // pre-incrementation
+
+/* ---------------------------- */
+
+Decrementation 
+
+var myVar = 55;
+myVar = myVar - 1;
+
+// is equal to :
+
+myVar -= 1;
+
+// or 
+
+myVar--; // post-decrementation
+--myVar; // pre-decrementation
+
+/* ---------------------------- */
+
+x = x + x -> x += x
+x = x - x -> x -= x
+x = x * x -> x *= x
+x = x / x -> x /= x
+x = x % x -> x %= x
+x = x ** x -> x **= x
+
+/* ---------------------------- */
+
+Decimal number
+
+var ourDecimal = 5.7;
+
+var myDecimal = 0.009;
+
+/* ---------------------------- */
+
+Multiply decimals
+
+var product = 2.0 * 2.5;
+console.log(product); // 5 
+
+/* ---------------------------- */
+
+Divide decimals
+
+var quotient = 4.4 / 2.0;
+console.log(quotient); // 2.2
+
+/* ---------------------------- */
+// etc...
+
+Declare String Value 
+
+// Example
+var fisrtName = "Alan";
+var lastName = "Turing";
+
+// to escape :
+// escape charactor is \
+
+var myStr = "I'm a \"double quoted\" string inside \"double quotes\"";
+
+// with single quotes instead :
+
+myStr = 'I am a "double quoted" string';
+
+// with backticks : 
+
+myStr = `I'm a "double quoted" string inside "double quotes"`;
+
+/* ---------------------------- */
+
+Escape sequences
+
+/*****
+ * CODE  OUTPUT
+ * \'    single quote
+ * \"    double quote
+ * \\    backslash
+ * \n    newline
+ * \r    carriage return
+ * \t    tab
+ * \b    backspace
+ * \f    form feed
+ *****/
+
+/* ---------------------------- */
+
+// concatenation
+
+var ourStr = "I come first. " + "I come second";
+var myStr = "This is the start. " + "This is the end";
+
+ourStr = "I come first. ";
+ourStr += "I come second.";
+
+myStr = "This is the first sentence. "
+myStr += "This is the second sentence."
+
+var myName = "Sekai";
+var presentation = "Hello, I'm " + myName;
+
+/* ---------------------------- */
+
+var anAdjective = "awesome!";
+var ourStr = "freeCodeCamp is ";
+ourStr += anAdjective;
+
+/* ---------------------------- */
+
+var firstNameLength = 0;
+var firtName = "Ada";
+
+firstNameLength = firtName.length;
+
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+lastNameLength = lastName.length;
+
+/* ---------------------------- */
+
+var fisrtLetterOfFirstName = "";
+var firstName = "Ada";
+
+fisrtLetterOfFirstName = firstName[0];
+
+Javascript is Zero-Based Indexing
+
+/* ---------------------------- */
+
+String are immutable
+
+var myStr = "Jello World";
+
+// can do that : 
+
+myStr[0] = "H";
+
+// but that Yes ! :
+
+myStr = "Hello World";
+
+/* ---------------------------- */
+
+var firstName = "Lucas";
+lastLetterOfFirstName = firstName[firstName.length -1]; // s
+
+console.log(firstName[firstName.length -2]); // a
+console.log(firstName[firstName.length -3]); // c
+
+/* ---------------------------- */
+
+Word Blank 
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    
+    var result = "";
+    result += "The "+myAdjective+" "+myNoun+" "+myVerb+" to the store "+myAdverb;
+    return result;
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+
+/* ---------------------------- */
+
+var ourArray = ["John", 23];
+
+var myArray = ["Quincy", 1, true, 0.1];
+
+/* ---------------------------- */
+
+Nested Array
+
+var ourArray = [
+    ["the universe", 42],
+    ["everything", 101010]
+];
+
+/* ---------------------------- */
+
+Acces Array Data 
+
+var basicArray = [50, 60, 78];
+var ourArray = basicArray[0]; // 50
+
+console.log(basicArray[basicArray.length -1]); // the last element. Here 78
+
+/* ---------------------------- */
+
+Modify Array Data
+
+var ourArray = [18, 64, 99];
+ourArray[1] = 45; // ourArray is no equals [18, 45, 99].
+
+/* ---------------------------- */
+
+var myArray = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [
+        [10,11,12],
+    13, 14]
+];
+
+var myData = myArray[0][0]; // 1 
+
+myData = myArray[3][0][2]; // 12
+
+/* ---------------------------- */
+
+push()
+
+var ourArray = ["stimpson", "J", "cat"];
+
+ourArray.push(["happy", "joy"]);
+ourArray.push("Ohayo");
+
+// add at the end
+
+/* ---------------------------- */
+
+pop()
+
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop();
+// remove the last element
+
+/* ---------------------------- */
+
+shift()
+
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.shift();
+// remove the first element
+
+/* ---------------------------- */
+
+unshift()
+
+var ourArray = ["Sekai", "Rukas", 14];
+ourArray.shift(); // ["Rukas", 14]
+ourArray.unshift("Kotonoha-san"); // ["Kotonoha-san", "Rukas", 14]
+// add an element to the beginning of the array
+
+/* ---------------------------- */
+
+var myList = [
+    ["cerals", 3],
+    ["milk", 2],
+    ["bananas", 3],
+    ["juice", 2],
+    ["eggs", 4]
+]
+
+/* ---------------------------- */
+
+function ourReusableFunction() {
+    console.log("Ohayo Onii-chan ^^");
+}
+
+ourReusableFunction();
+
+/* ---------------------------- */
+
+function ourFunctionWithArgs(a, b) {
+    console.log(a - b);
+}
+
+ourFunctionWithArgs(5, 4); // outputs : 1
+
+function say(msg) {
+    console.log(msg);
+}
+
+say("Hello");
+
+/* ---------------------------- */
+
+var myGlobal = 10;
+
+function fun1() {
+
+    oopsGlobal = 5; // this is a global variable because he doesn't have any keyword like var, let, const
+
+}
+
+function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined") {
+        output += "myGlobal : " + myGlobal;
+    }
+    if (typeof oopsGlobal != "undefined") {
+        output += "oopsGlobal : " + oopsGlobal;
+    }
+    console.log(output);
+}
+
+fun1();
+fun2();
+
+/* ---------------------------- */
+
+function myLocalScope() {
+    var myVar = 5;
+    console.log(myVar);
+}
+
+myLocalScope();
+
+console.log(myVar); // cannot
+
+/* ---------------------------- */
+
+var outerWear = "T-shirt";
+
+function myOutfit() {
+    return outerWear;
+}
+
+console.log(myOutfit()); // T-shirt
+
+/* ---------------------------- */
+
+var outerWear = "T-shirt";
+
+function myOutfit() {
+    var outerWear = "sweater";
+    return outerWear;
+}
+
+console.log(myOutfit()); // sweater
+console.log(outerWear); // T-shirt
+
+/* ---------------------------- */
+
+function minusSeven(num) {
+    return num -7;
+}
+
+console.log(minusSeven(10)); // 3
+var nb = minusSeven(30);
+console.log(nb); // 23
+
+/* ---------------------------- */
+
+var sum = 0;
+function addThree() {
+    sum = sum + 3;
+}
+
+// The return of the function is just undefined
+
+/* ---------------------------- */
+
+var changed = 0;
+
+function change(num) {
+    return (num + 5) / 3;
+}
+
+changed = change(10);
+
+/* ---------------------------- */
+
+function nextInLine(arr, item) {
+    arr.push(item);
+    return arr.shift(); // remove the first and return it
+}
+
+var testArr = [1,2,3,4,5];
+
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+/* ---------------------------- */
+
+true/false
+
+function welcomeToBooleans() {
+    return false;
+}
+
+/* ---------------------------- */
+
+function ourTreeOrFalse(isItTrue) {
+    return isItTrue ? "Yes, it's true" : "No it's false";
+}
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+ourTreeOrFalse(true);
+trueOrFalse(5 == 5);
+
+/* ---------------------------- */
+
+function testEqual(val) {
+    if (val == 12) {
+        return "equal to 12";
+    }
+    return "not equal to 12";
+}
+
+testEqual(10);
+
+/* ---------------------------- */
+
+function testStrict(val) {
+    if (val === 7) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+testStrict(10);
+
+/*
+3 == 3 true
+3 == "3" true
+
+3 === 3  true
+3 === "3" false
+*/
+
+/* ---------------------------- */
+
+function testNotEqual(val) {
+    if (val != 99) {
+        return "Not Equal";
+    }
+    return "Equal";
+}
+
+console.log(testNotEqual(10));
+
+/* ---------------------------- */
+
+function testStrictNotEqual(val) {
+    if (val !== 17) {
+        return "Not equal";
+    }
+    return "equal";
+}
+
+console.log(testStrictNotEqual(10));
+
+/* ---------------------------- */
+
+other comparaison operator :
+
+// < 
+// >
+// <=
+// >=
+
+/* ---------------------------- */
+
+function testLogicalAnd(val) {
+    
+    if (val <= 50 && val >= 25) {
+        return "Yes";
+    }
+    return "No";
+}
+
+function testLogicalOr(val) {
+    
+    if (val === 50 || val === 100) {
+        return "Yes";
+    }
+    return "No";
+}
+
+/* ---------------------------- */
+
+function testElse(val) {
+    var result = "";
+    if (val > 5) {
+        result = "Bigger than 5";
+    }
+    else {
+        result = "5 or smaller";
+    }
+    return result;
+}
+
+/* ---------------------------- */
+
+function testElseIf(val) {
+    if (val > 10) {
+        return "Greater than 10";
+    } else if (val < 5) {
+        return "smaller than 5";
+    } else {
+        return "between 5 and 10";
+    }
+}
+
+order is important
+
+/* ---------------------------- */
+
+function testSize(num) {
+    if (num < 5) {
+        return "Tiny";
+    } else if (num < 10) {
+        return "small";
+    } else if (num < 15) {
+        return "medium";
+    } else if (num < 20) {
+        return "large";
+    } else {
+        return "huge";
+    }
+}
+
+/* ---------------------------- */
+
+var names = ["Hole-in-one!",
+            "Eagle",
+            "Birdie",
+            "Par",
+            "Bogey",
+            "Double Bogey",
+            "Go Home!"]
+
+function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0];
+    } else if (strokes <= par - 2) {
+        return names[1];
+    } else if (strokes == par - 1) {
+        return names[2];
+    } else if (strokes == par) {
+        return names[3];
+    } else if (strokes == par + 1) {
+        return names[4];
+    } else if (strokes == par + 2) {
+        return names[5];
+    } else if (strokes == par + 3) {
+        return names[6];
+    }
+}
+
+/* ---------------------------- */
+
+function caseInSwitch(val) {
+    var answer = "";
+    switch (val) {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+        default:
+            break;
+    }
+    return answer;
+}
+
+/* ---------------------------- */
+
+function sequentialSizes(val) {
+    var answer = "";
+    switch(val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High";
+            break;
+    }
+    return answer;
+}
+
+/* ---------------------------- */
+
+function isLess(a, b) {
+    return a < b; // true or false 
+}
+
+/* ---------------------------- */
+
+function abTest(a, b) {
+    
+    if (a < 0 || b < 0) {
+       return undefined;
+    }
+
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+/* ---------------------------- */
+
+var count = 0;
+
+function cc(card) {
+
+    switch(card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "G":
+        case "K":
+        case "A":
+            count--;
+            break;
+            
+    }
+
+    var holdbet = "Hold";
+    if (count > 0) {
+        holdbet = "Bet";
+    } 
+
+    return count + " " + holdbet;
+}
+
+cc(2); cc(3); cc(10); cc("K"); cc("A");
+
+/* ---------------------------- */
+
+// Objects
+
+var ourDog = {
+    "name": "Camper",
+    "legs":  4,
+    "tails": 1,
+    "frinds": ["everything!"]
+};
+
+/* ---------------------------- */
+
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+/* ---------------------------- */
+
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+var hatValue = testObj["hat"];
+var shirtValue = testObj['shirt'];
+
+/* ---------------------------- */
+
+var testObj = {
+    12: "namath",
+    16: "montana",
+    19: "unitas"
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+
+/* ---------------------------- */
+
+var ourDog = {
+    "name": "Camper",
+    "legs":  4,
+    "tails": 1,
+    "frinds": ["everything!"]
+};
+
+ourDog.name = "Happy Camper";
+ourDog.presentation = "hello";
+
+ourDog['age'] = 14;
+
+/* ---------------------------- */
+
+var ourDog = {
+    "name": "Camper",
+    "legs":  4,
+    "tails": 1,
+    "frinds": ["everything!"]
+};
+
+delete ourDog.name;
+
+/* ---------------------------- */
+
+function phoneticLookup(val) {
+    
+    var result = "";
+
+    var lookup = {
+        "alpha": "adams",
+        "bravo": "boston",
+        "charlie": "chicago"
+    };
+
+    result = lookup[val];
+    
+    return result;
+}
+
+/* ---------------------------- */
+
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp];
+    } else {
+        return "Not Found 404";
+    }
+}
+
+console.log(checkObj("gift"));
+
+/* ---------------------------- */
+
+var waifus = [
+    {
+        "name": "Sekai Saoinji",
+        "anime": "School Days",
+        "character": "Yandere",
+        "release_year": "~2008",
+        "goodies": [
+            "jackets",
+            "songs",
+            "video-games"
+        ],
+        "rank": 15,
+        "isAlive": false
+    },
+    {
+        "name": "Miku Nakano",
+        "anime": "The quintessential quintuplets",
+        "character": "Shy girl",
+        "release_year": null,
+        "goodies": [
+            "phone cover",
+            "songs"
+        ],
+        "rank": 5,
+        "isAlive": true
+    }
+];
+
+/* ---------------------------- */
+
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }   
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+// just beautifull !! 
+
+/* ---------------------------- */
+
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+
+var secondTree = myPlants[1].list[1];
+
+/* ---------------------------- */
+
+var collection = {
+    "2548": {
+        "album": "Slippery When Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let It rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]   
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439": {
+        "album": "ABBA Gold"
+    }
+};
+
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords(id, prop, value) {
+    
+    if (value === "") {
+        delete collection[id][prop];
+    } else if (prop === "tracks") {
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+
+    return collection;
+}
+
+console.log(updateRecords(5439, "artist", "ABBA"));
+
+/* ---------------------------- */
+
+var myArray = [];
+
+var i = 0;
+while (i < 5) {
+    myArray.push(i);
+    i++;
+}
+
+/* ---------------------------- */
+
+var ourArray = [];
+
+for (var i = 0 ; i < 5 ; i++) {
+    ourArray.push(i);
+}
+
+/* ---------------------------- */
+
+var ourArray = [];
+
+for (var i = 0 ; i < 10 ; i += 2) {
+    ourArray.push(i);
+}
+
+/* ---------------------------- */
+
+var ourArray = [];
+
+for (var i = 10 ; i > 0 ; i -= 2) {
+    ourArray.push(i);
+}
+
+var ourArray = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArray.length; i++) {
+    ourTotal += ourArray[i];
+}
+
+/* ---------------------------- */
+
+function multiplyAll(arr) {
+    var product = 1;
+
+    for (var i = 0 ; i < arr.length ; i++) {
+        for (var j = 0 ; j < arr[i].length ; j++) {
+            product *= arr[i][j];
+        }
+    }
+
+    return product;
+}
+
+var product = multiplyAll([
+    [1,2],
+    [3,4],
+    [5,6,7]
+])
+
+console.log(product);
+
+/* ---------------------------- */
+
+var myArray = [];
+var i = 10;
+
+do {
+    
+    myArray.push(i);
+    i++;
+} while (i < 5);
+
+/* ---------------------------- */
+
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    }
+];
+
+function lookUpProfile(name, prop) {
+    for (var i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName === name) {
+            return contacts[i][prop] || "no suh property";
+        }
+    }
+    return "No such contact";
+}
+
+var data = lookUpProfile("Akira", "likes");
+console.log(data);
+
+/* ---------------------------- */
+
+function randomFraction() {
+    return Math.random(); // between 0 and 1 but not be 1
+}
+
+/* ---------------------------- */
+
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+function randomNumBetween0and100() {
+    return Math.floor(Math.random() * 101);    
+}
+
+/* ---------------------------- */
+
+function randomRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min; // between min and max (both include)
+}
+
+/* ---------------------------- */
+
+function convertToInteger(str) {
+    return parseInt(str);
+}
+
+var nb = convertToInteger("56");
+
+/* ---------------------------- */
+
+function convertToInteger(str) {
+    return parseInt(str, 2);
+}
+
+var nb = convertToInteger("10011");
+
+/* ---------------------------- */
+
+// condition ? if-true : if-false
+
+function checkEqual(a, b) {
+    return a === b ? "it's true" : "it's false";
+}
+
+/* ---------------------------- */
+
+function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+console.log(checkSign(10));
+
+/* ---------------------------- */
+
+var catName = "Quincy";
+var quote;
+
+var catName = "Beau";
+
+function catTalk() {
+    "use strict";
+
+    catName = "Oliver";
+    quote = catName + " says Meow!";
+}
+
+catTalk();
+
+/*  correction */
+
+let catName = "Quincy";
+let quote;
+
+catName = "Beau";
+
+function catTalk() {
+    "use strict"; // alert if you declare a var without let, var, const
+
+    catName = "Oliver";
+    quote = catName + " says Meow!";
+}
+
+catTalk();
+
+// with let : can't redeclare a variable
+// use strict : can't declare a global variable
+
+/* ---------------------------- */
+
+function checkScope() {
+    "use strict";
+    var i = "function scope";
+    if (true) {
+        i = "block scope";
+        console.log("block scope i is: ", i);
+    }
+    console.log("Function scope i is: ", i);
+    return i;
+}
+
+checkScope();
+
+/* correction */
+
+function checkScope() {
+    "use strict";
+    let i = "function scope";
+    if (true) {
+        let i = "block scope";
+        console.log("block scope i is: ", i);
+    }
+    console.log("Function scope i is: ", i);
+    return i;
+}
+
+checkScope();
+
+/* ---------------------------- */
+
+function printManyTimes(str) {
+    "use strict";
+
+    var sentence = str + "is cool!";
+    sentence = str + " is amazing!";
+    for (var i = 0 ; i < str.length ; i += 2) {
+        console.log(sentence);
+    }
+}
+
+printManyTimes("freeCodeCamp"); // 6 * "freeCodeCamp is amazing!"
+
+function printManyTimes(str) {
+    "use strict";
+
+    const SENTENCE = str + " is cool!";
+    // sentence = str + " is amazing!"; cannot
+    for (let i = 0 ; i < str.length ; i += 2) {
+        console.log(SENTENCE);
+    }
+}
+
+printManyTimes("freeCodeCamp"); // 6 * "freeCodeCamp is cool!"
+
+/* ---------------------------- */
+
+const s = [5, 7, 2];
+function editInPlace() {
+    "use strict";
+    
+    // s = [2, 5, 7];
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+}
+
+editInPlace();
+
+/* ---------------------------- */
+
+function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch(ex) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+console.log(PI);
+
+/* correction */
+
+function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+
+    Object.freeze(MATH_CONSTANTS);
+
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch(ex) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+console.log(PI);
+
+/* ---------------------------- */
+
+var magic = function() {
+    return new Date();
+};
+
+const magic = () => new Date();
+
+/* ---------------------------- */
+
+var myContact = function(arr1, arr2) {
+    return arr1.concat(arr2);
+};
+
+console.log(myContact([1, 2], [3, 4, 5]));
+
+// -> 
+
+const myContact = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myContact([1, 2], [3, 4, 5]));
+
+/* ---------------------------- */
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+    const squaredIntegers = arr;
+    return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+// ->
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+    return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+/* ---------------------------- */
+
+const increment = (function() {
+    return function increment(number, value = 1) {
+        return number + value;
+    };
+})();
+
+console.log(increment(5, 2));
+console.log(increment(5));
+
+/* ---------------------------- */
+
+const sum = (function() {
+    return function sum(...args) {
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+
+/* ---------------------------- */
+
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+(function() {
+    arr2 = [...arr1]; // arr2 is equal to all the content of arr1
+    arr1[0] = "potato"
+})();
+
+console.log(arr2);
+
+/* ---------------------------- */
+
+var voxel = {x: 3.6, y: 7.4, z: 6.54};
+
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+
+const {x: a, y: b, z: c} = voxel; // a= 3.6, b = 7.4, c = 6.54
+
+const AVG_TEMPERATURES = {
+    today: 77.5,
+    tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+    "use strict";
+
+    const {tomorrow: tempOfTomorrow} = avgTemperatures;
+
+    return tempOfTomorrow;
+}
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+/* ---------------------------- */
+
+const LOCAL_FORECAST = {
+    today: {min: 72, max: 83},
+    tomorrow: {min: 73.3, max: 84.6}
+};
+
+function getMaxofTomrw(forecast) {
+    "use strict";
+    const { tomorrow : { max : maxOfTomorrow}} = forecast;
+
+    return maxOfTomorrow;
+}
+
+console.log(getMaxofTomrw(LOCAL_FORECAST));
+
+/* ---------------------------- */
+
+const [z, x, , y] = [1, 2, 3, 4, 5, 6];
+console.log(z, x ,y) // 1 2 4
+
+let a = 8, b = 6;
+(() => {
+    "use strict";
+    [a, b] = [b, a]
+})();
+
+console.log(a); // 6
+console.log(b) // 8
+
+/* ---------------------------- */
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+    const [ , , ...arr] = list;
+    return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr); // 3 4 5 6 7 8 9 10
+console.log(source); // 1 2 3 4 5 6 7 8 9 10
+
+/* ---------------------------- */
+
+const stats = {
+    max: 56.78,
+    standard_derivation: 4.34,
+    median: 34.54,
+    node: 23.87,
+    min: -0.75,
+    average: 35.85
+};
+
+const half = (function() {
+    return function half({max, min}) {
+        return (max + min) / 2.0;
+    };
+})();
+
+console.log(stats);
+console.log(half(stats));
+
+/* ---------------------------- */
+
+const person = {
+    name: "Zodiac Hasbro",
+    age: 56
+};
+
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting);
+
+const result = {
+    succes: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["id-blacklist", "no-dup-keys"]
+};
+
+/* ---------------------------- */
+
+function makeList(arr) {
+    const resultDisplayArray = [];
+    for (let i = 0 ; i < arr.length ; i++) {
+        resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+    return resultDisplayArray;
+}
+
+const resultDisplayArray = makeList(result.failure);
+console.log(resultDisplayArray);
+
+/* ---------------------------- */
+
+const createPerson = (name, age, gender) => ({name, age, gender});
+    
+// return {
+    //     name: name,
+    //     age: age,
+    //     gender: gender
+    // };
+
+console.log(createPerson("Sekai", 15, "female"));
+
+/* ---------------------------- */
+
+const bicycle = {
+    gear: 2,
+    setGear: function(newGear) {
+        "use strict";
+        this.gear = newGear;
+    }
+};
+
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+/* ---------------------------- */
+
+var SpaceShuttle = function(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+}
+
+var zeus = new SpaceShuttle("Jupiter");
+
+console.log(zeus.targetPlanet);
+
+// with class syntax ->
+
+class SpaceShuttle {
+    constructor(targetPlanet) {
+        this.targetPlanet = targetPlanet;
+    }
+}
+
+var zeus = new SpaceShuttle("Jupiter");
+console.log(zeus.targetPlanet);
+
+
+function makeClass() {
+    class Vegetable {
+        constructor(name) {
+            this.name = name;
+        }
+    }    
+    return Vegetable;
+}
+
+const Vegetable = makeClass();
+const carrot = new Vegetable("Carrot");
+console.log(carrot.name);
+
+/* ---------------------------- */
+
+class Book {
+    constructor(author) {
+        this._author = author;
+    }
+    // getter
+    get writer() {
+        return this._author;
+    }
+    // setter
+    set writer(updateAuthor) {
+        this._author = updateAuthor;
+    }
+}
+
+function makeClass() {
+    class Thermostat {
+        constructor(temp) {
+            this._temp = 5/9 * (temp -32);
+        }
+        get temperature() {return this._temp};
+        set temperature(updateTemp) {this._temp = updateTemp};
+    }
+    return Thermostat;   
+}
+
+const Thermostat = makeClass();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
+
+console.log(temp);
+
+/* ---------------------------- */
+
+file1 : 
+    export const capitalizeString = str => str.toUpperCase();
+
+file2 : 
+    import {capitalizeString} from "./file1.js"
+    // and now you can use it
+    const cap = capitalizeString("hello!");
+    console.log(cap);
+
+/* ---------------------------- */
+
+file1 : 
+    const capitalizeString = (string) => {
+        return string.chatAt(0).toUpperCase() + string.slice(1);
+    }
+
+    export { capitalizeString };
+
+    export const foo = "bar";
+    export const bar = "foo";
+
+file2 : 
+    import {capitalizeString, foo, bar} from "./file1.js"
+    // some code...
+
+/* ---------------------------- */
+
+import * as capitalizeStrings from "./capitalize_strings.js";
+
+capitalizeString.// what do you want...
+
+/* ---------------------------- */
+
+export default function subtract(x, y) {
+    return x - y;
+}
+
+/* ---------------------------- */
+import subtract from "./math_function";
+subtract(7, 4);
+
+/* 
+    FINISH
+*/
+
